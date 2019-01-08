@@ -537,9 +537,9 @@ Page({
   goDetail: function(e) {
 
     wx.navigateTo({
-      url: "/pages/first/first"
+      url: "/pages/goodsdetail/goodsdetail"
     })
-    console.log("来first坐坐");
+    console.log("来goodsdetail坐坐");
 
     // wx.navigateTo({
     //   url: "/pages/address/address"

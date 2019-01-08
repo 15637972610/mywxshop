@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/first/first",
     "pages/mine/mine",
     "pages/index/index",
     "pages/userConsole/userConsole",
@@ -11,32 +10,49 @@
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/goodsdetail/goodsdetail",
-    "pages/goodslist/goodslist"
+    "pages/goodslist/goodslist",
+    "pages/classify/classify",
+    "pages/cart1/cart1"
   ],
   "window": {
-    "backgroundColor": "#getUserInfo F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#f0145a",
+    "navigationBarTitleText": "微商城",
+    "backgroundColor": "#getUserInfo F6F6F6"
   },
   "cloud": true,
   "usingComponents": {
-    "first": "/pages/first/first"
+    
   },
   "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#f0145a",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#000",
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "images/tab_home.png",
-        "selectedIconPath": "images/tab_home_s.png"
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "iconPath": "images/classify.png",
+        "selectedIconPath": "images/classify_select.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart1/cart1",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart_select.png",
+        "text": "购物车"
       },
       {
         "pagePath": "pages/mine/mine",
-        "text": "我的",
-        "iconPath": "images/tab_my.png",
-        "selectedIconPath": "images/tab_my_s.png"
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_select.png",
+        "text": "我的"
       }
     ]
   }
