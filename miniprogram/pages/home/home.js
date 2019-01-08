@@ -9,6 +9,7 @@ Page({
    */
   data: {
     //binner的相关设置
+    imageWidth: wx.getSystemInfoSync().windowWidth,//图片宽度 
     arr: [], //binner图片的集合
     indicatorDots: true, //是否显示面板指示点
     autoplay: true, //是否自动切换

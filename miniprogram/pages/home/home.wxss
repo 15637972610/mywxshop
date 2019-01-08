@@ -6,7 +6,7 @@ page {
 }
 /**轮播图**/
 .home_banner{
-  margin-top: 8px;
+
 }
 
 /*分类导航*/
