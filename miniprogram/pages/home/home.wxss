@@ -1,0 +1,212 @@
+/* miniprogram/pages/home/home.wxss */
+page {
+  display: flex;  
+  flex-direction: column;  
+  height: 100%; 
+}
+/**轮播图**/
+.home_banner{
+  margin-top: 8px;
+}
+
+/*分类导航*/
+.navs {
+  display: flex; 
+  justify-content: left; 
+  flex-direction: row;
+  flex-wrap: wrap;  
+}
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  /* padding: 20rpx; */
+  padding-top: 20rpx;
+}
+.nav-item .nav-image {
+  width: 80rpx;
+  height: 80rpx;
+  /* border-radius: 50%;设置边界圆角 */
+}
+.nav-item text {
+  padding-top: 20rpx;
+  font-size: 25rpx;
+}
+/* 分割线 */
+.separate {
+  height: 15rpx;
+  background-color: #f2f2f2;
+}
+/*新品特卖*/
+  .common-title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 0rpx;
+  padding: 0px 10px;
+  
+} 
+/**=========公共样式============**/
+ .common-title .title{
+  font-size: 14px;
+  font-weight:900;
+} 
+
+.common-title .line_name{
+  font-size: 10px;
+  color: #98989f;
+  display: flex;
+  justify-content:space-between;
+
+} 
+
+.common-title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25rpx;
+  margin-bottom: 0rpx;
+}
+
+.common-title .name {
+  font-size: 40rpx;
+  text-align: center;
+  margin: 10rpx auto;
+}
+.line_flag {
+  width: 80rpx;
+  height: 1rpx;
+  display: inline-block;
+  margin: 20rpx auto;
+  background-color: gainsboro;
+  text-align: center;
+}
+.line {
+  width: 100%;
+  height: 2rpx;
+  display: inline-block;
+  margin: 20rpx 0rpx;
+  background-color: gainsboro;
+  text-align: center;
+}
+.head-img {
+  width: 100%;
+}
+.brand-name{
+  font-weight: 600; 
+  font-size: 32rpx;
+}  
+
+.pms{
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  display: flex; 
+  justify-content: left; 
+  flex-direction: row;
+  color: #5771a8;
+} 
+.activity-logo {
+  width:35rpx;
+  height:35rpx;
+  margin-right: 10rpx;
+  /* position: absolute; */
+}
+
+/**=========福利专场============**/
+.welfares{
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:10px 5px;
+}
+.welfares-good{
+  /* height: 500rpx;  */
+  width: 47%;
+  margin:0px auto;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  font-size: 24rpx;
+  /* border: 1px #eee solid;  */
+}
+.welfares-image{
+  width: 100%;
+  display: inline-block;
+  border: 1px #eee solid; 
+}
+.welfares-good .product-name{
+  color: #000;
+  /* height: 28px; */
+  text-align:left;
+   margin: 0px 5px; 
+   margin-bottom: 5px; 
+}
+.product-price-wrap{
+  height: 40rpx;
+}
+
+.product-price-wrap .product-price-new{
+  color: #e80080;
+  margin-left:5px;
+  font-weight:900;
+  font-size: 30rpx;
+}
+.product-price-wrap .product-price-old{
+  color: #888;
+  text-decoration: line-through;
+  padding-left: 2px;
+}
+.product-price-wrap .discount{
+  position: absolute;
+  right: 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+
+/**爆款推荐**/
+.price_text, price_text_od {
+  display: inline-flex;
+  margin-top: 5px;
+  padding-left: 10px;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+.price_text_od {
+  margin-left: 8px;
+  text-decoration: line-through;
+  color:#9c9c9c;
+}
+.commodity_view {
+  margin-top: 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: white;
+  border-radius: 15rpx;
+  padding-bottom: 10px;
+}
+
+.commodity_image,.commodity_image_out{
+  width: 100%;
+  height: 170px;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+
+.commodity_image_out{
+  opacity:0.4;
+}
+
+
+/**底部沒有更多**/
+.end_title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color:#9c9c9c;
+}
+

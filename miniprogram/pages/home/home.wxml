@@ -1,0 +1,88 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view class='home_continer'>
+
+  <!--binner 轮播图部分-->
+  <view class='home_banner'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+      <block wx:for="{{arr}}" wx:key="id">
+        <swiper-item>
+          <image src="{{item.imgUrl}}" mode="widthFix" data-goodsid="{{item.id}}" catchtap="show" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 分类导航-->
+  <view class='home_categray'>
+    <view class="navs">
+      <block wx:for-items="{{menus}}" wx:key="name">
+        <view class="nav-item" data-type="{{item.menuName}}" data-typeid="{{item.id}}">
+          <image src="{{item.imgUrl}}" class="nav-image" />
+          <text>{{item.menuName}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!--这是一个分割线-->
+  <view class="separate"></view>
+  <!--新品特卖-->
+  <view class="newgoods-container">
+    <view class="common-title">
+      <text class="name">新品特卖</text>
+      <view class="line_flag"></view>
+      <block wx:for-items="{{brands}}" wx:key="id">
+        <navigator url="/pages/goodslist/goodslist">
+          <image class="head-img" src="{{item.imgUrl}}" mode="widthFix"></image>
+        </navigator>
+        <text class="brand-name">{{item.name}}</text>
+        <view class='pms'>
+          <image class="activity-logo" src="../../images/activity_logo.png" mode="widthFix"></image>
+          {{item.remark}}
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!--福利专场 start-->
+  <view class="welfare-container"> 
+  <view class="common-title">
+    <text class="title">福利专场</text>
+    <view class="line_name">
+      <text>每天早10晚8准时上新</text>
+    </view>
+  </view>  
+  <scroll-view scroll-y="true">
+      <view class="welfares">
+         <block wx:for-items="{{newGoods}}" wx:key="id">
+          <view class="welfares-good" catchtap="catchTapCategory" data-name="{{item.name}}" data-goodsid="{{item.id}}">
+            <view>
+              <image src="{{item.imgUrl}}" class="welfares-image" mode="widthFix"/> 
+            </view>
+            <view class="product-name">
+              {{item.name}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.price}}</p>  
+              <p class="product-price-old">￥{{item.privilegePrice}}</p> 
+              <p class="discount">{{item.discount}}折</p>  
+            </view>
+            
+          </view>
+        </block> 
+      </view>
+  </scroll-view>  
+</view>   
+<!--福利专场 end-->
+<!--自定义-->
+  <scroll-view scroll-y="true" style='height:100%' bindscrolltoupper="upper" bindscrolltolower="lower" wx:for-items="{{goodsList}}" wx:key="{{index}}">
+    <block wx:if="{{item.onSale}}">
+      <view class='commodity_view' bindlongtap='goDetail' data-id='{{item.id}}'>
+        <image class='commodity_image' mode="scaleToFill" src='{{item.coverImg}}'></image>
+        <text class='price_text'>￥{{item.price}}</text>
+        <text class='price_text_od'>￥{{item.oldPrice}}</text>
+        <label class='commodity_name'>{{item.name}}</label>
+      </view>
+    </block>
+  </scroll-view>
+  <view class='end_title' hidden='{{isEnd_title?true:false}}'>-----没有更多数据了--------</view>
+</view>
