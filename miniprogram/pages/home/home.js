@@ -456,7 +456,7 @@ Page({
     that.goodsClickShow(goodsId);
     //跳转商品详情
     wx.navigateTo({
-      url: '../goodsdetail/goodsdetail'
+      url: '../detail/detail'
     })
   },
   //福利专场的点击跳转函数
@@ -467,7 +467,7 @@ Page({
     //新增商品用户点击数量
     that.goodsClickShow(goodsId);
     //跳转商品详情
-    // wx.navigateTo({ url: '../detail/detail?goodsId=' + goodsId })
+    wx.navigateTo({ url: '../detail/detail?goodsId=' + goodsId })
   },
   goodsClickShow(goodsId) {
     console.log('增加商品用户点击数量');

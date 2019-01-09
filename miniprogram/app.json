@@ -9,7 +9,6 @@
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
-    "pages/goodsdetail/goodsdetail",
     "pages/goodslist/goodslist",
     "pages/classify/classify",
     "pages/cart1/cart1",
