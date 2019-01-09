@@ -12,7 +12,10 @@
     "pages/goodsdetail/goodsdetail",
     "pages/goodslist/goodslist",
     "pages/classify/classify",
-    "pages/cart1/cart1"
+    "pages/cart1/cart1",
+    "pages/classifyGoods/classifyGoods",
+    "pages/detail/detail",
+    "pages/template/template"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,9 +24,7 @@
     "backgroundColor": "#getUserInfo F6F6F6"
   },
   "cloud": true,
-  "usingComponents": {
-    
-  },
+  "usingComponents": {},
   "tabBar": {
     "color": "#858585",
     "selectedColor": "#f0145a",
