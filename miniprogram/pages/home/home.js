@@ -59,7 +59,8 @@ Page({
   onLoad: function(options) {
     var that = this;
     //加载banner轮播
-    that.bannerShow();
+    that.getBinnerImageList()
+    // that.bannerShow();
     //加载menu分类导航菜单
     that.menuShow();
     //加载新品特卖
@@ -73,39 +74,8 @@ Page({
 
 
   },
-  //加载banner轮播
-  bannerShow: function() {
-    var that = this;
-    var arr = [{
-      "id": 1,
-      "bannerName": "全新上市",
-      "imgUrl": "http://mz.djmall.xmisp.cn/files/banner/20161222/14823895573.png",
-      "clickUrl": "",
-      "seq": 1
-    }, {
-      "id": 2,
-      "bannerName": "全球优选团",
-      "imgUrl": "http://pic1.ymatou.com/G02/M07/7C/CE/CgvUBFrNzZaAMSW8AAFEr6p5z9M050_75_52_o.jpg",
-      "clickUrl": "",
-      "seq": 2
-    }, {
-      "id": 3,
-      "bannerName": "新会员满减",
-      "imgUrl": "http://m.360buyimg.com/babel/s1120x448_jfs/t16888/181/1508937864/193227/98374bc0/5acdd4c3N8e1f4ba1.jpg",
-      "clickUrl": null,
-      "seq": 3
-    }, {
-      "id": 4,
-      "bannerName": "口红",
-      "imgUrl": "http://mz.djmall.xmisp.cn/files/banner/20161222/148238831285.png",
-      "clickUrl": null,
-      "seq": 4
-    }]
-    that.setData({
-      arr
-    })
+  
 
-  },
   //加载menu分类导航菜单
   menuShow: function() {
     var that = this;
@@ -553,5 +523,28 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  /**通过云函数获取binner_image_list,加载banner轮播 */
+  getBinnerImageList:function(){
+    var that =this
+    var arr=null
+    wx.cloud.callFunction({
+      // 要调用的云函数名称
+      name: 'getbinnerlist',
+      // 传递给云函数的参数
+      // data: {
+      // },
+      success: res => {
+        console.log("success"+JSON.stringify(res.result))
+        that.setData({ arr: res.result.binnerlist.data})
+      },
+      fail: err => {
+        console.log("fail" + JSON.stringify(err.errMsg))
+      },
+      complete: () => {
+        console.log("complete")
+      }
+    })
   }
+
 })
