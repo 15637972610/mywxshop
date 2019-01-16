@@ -14,7 +14,8 @@
     "pages/cart1/cart1",
     "pages/classifyGoods/classifyGoods",
     "pages/detail/detail",
-    "pages/template/template"
+    "pages/template/template",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
